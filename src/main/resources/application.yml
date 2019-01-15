@@ -1,0 +1,21 @@
+spring:
+  thymeleaf:
+    encoding: UTF-8
+    prefix: classpath:/static/
+    suffix: .html
+    cache: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///test
+    username: root
+    password: root
+  mvc:
+    static-path-pattern: /**
+
+
+
+
+mybatis:
+  configuration:
+    auto-mapping-behavior: full
+  type-aliases-package: com.cssl.entity
