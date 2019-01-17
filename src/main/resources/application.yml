@@ -6,16 +6,13 @@ spring:
     cache: false
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql:///test
+    url: jdbc:mysql:///peanutmi
     username: root
     password: root
   mvc:
     static-path-pattern: /**
 
-
-
-
 mybatis:
   configuration:
     auto-mapping-behavior: full
-  type-aliases-package: com.cssl.entity
+  type-aliases-package: com.peanut.entity

@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * 收藏表
  */
-public class Collection implements Serializable {
+public class Collections implements Serializable {
 
     private int colId;
     private Product prod;   //商品

@@ -11,6 +11,7 @@
     <link rel="icon" href="//s01.mifile.cn/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="static/css/base.min.css"/>
     <link rel="stylesheet" type="text/css" href="static/css/category.min.css"/>
+    <link rel="stylesheet" href="static/css/index2.css">
     <script type="text/javascript">
         /*<![CDATA[*/
         var navCategory = "toggled";
@@ -54,12 +55,12 @@
 <div class="site-header">
     <div class="container">
         <div class="header-logo">
-            <a class="logo ir" href="//www.mi.com/index.html" title="小米官网">小米官网</a>
+            <a class="logo ir" href="index" title="小米官网">小米官网</a>
         </div>
         <div class="header-nav">
             <ul class="nav-list J_navMainList clearfix">
                 <li id="J_navCategory" class="nav-category">
-                    <a class="link-category" href="//list.mi.com"><span class="text">全部商品分类</span></a>
+                    <a class="link-category" href="list"><span class="text">全部商品分类</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="link" href="javascript: void(0);"><span class="text">小米手机</span><span
@@ -668,8 +669,18 @@
         <div class="header-search">
             <form id="J_searchForm" class="search-form clearfix" action="//search.mi.com/search" method="get">
                 <label for="search" class="hide">站内搜索</label>
-                <input class="search-text" type="search" id="search" name="keyword" autocomplete="off"
-                       data-search-config={'defaultWords':[{'Key':'小米6X','Rst':6},{'Key':'小米MIX&nbsp;2S','Rst':5},{'Key':'黑鲨游戏手机','Rst':3},{'Key':'红米Note&nbsp;5','Rst':6},{'Key':'红米5A','Rst':13},{'Key':'小米电视4C','Rst':5},{'Key':'电视32英寸','Rst':3},{'Key':'笔记本pro','Rst':5},{'Key':'空气净化器','Rst':11},{'Key':'净水器','Rst':8}]}/>
+                <input class="search-text" type="search" id="search" name="keyword" autocomplete="off"/>
+                <div class="datalist">
+                    <ul>
+                        <li><a href="#">小米6X<span>约有6件</span></a></li>
+                        <li><a href="#">小米MIX 2S<span>约有5件</span></a></li>
+                        <li><a href="#">黑鲨游戏手机<span>约有3件</span></a></li>
+                        <li><a href="#">红米Note 5<span>约有6件</span></a></li>
+                        <li><a href="#">红米5A<span>约有13件</span></a></li>
+                        <li><a href="#">小米电话4C<span>约有5件</span></a></li>
+                        <li><a href="#">电视32英寸<span>约有3件</span></a></li>
+                    </ul>
+                </div>
                 <input type="submit" class="search-btn iconfont" value="&#xe616;"/>
                 <div class="search-hot-words">
                     <a href="https://www.mi.com/mi8/">小米8</a><a href="https://item.mi.com/product/10000085.html">小米MIX
@@ -817,6 +828,12 @@
                 $bd.fadeIn();
                 $icon.html("&#xe61a;");
             }
+        });
+        $(".search-text").on("click",function () {
+            $(".datalist").show();
+        });
+        $(".search-text").on("blur",function () {
+            $(".datalist").hide();
         });
     });
 </script>
